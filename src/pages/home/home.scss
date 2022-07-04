@@ -1,0 +1,43 @@
+.home{
+
+    display: flex;
+
+    .homeContainer{
+        
+        flex: 6;
+        .widgets{
+            display: flex;
+            padding: 20px;
+            gap: 10px;
+            margin-bottom: 2%;
+            margin-top: 1%;
+        }
+
+        .charts{
+            padding: 5px 20px;
+            flex:1;
+            display: flex;
+        }
+
+        .listContainer{
+            -webkit-box-shadow: 5px 5px 15px -6px rgba(0,0,0,0.33); 
+            box-shadow: 5px 5px 15px -6px rgba(0,0,0,0.33); 
+            flex: 4;
+            padding: 15px;
+            margin-left: 10px;
+            background-color: rgb(145, 0, 0);
+            border-radius: 15px;
+            color: white;
+
+            .listtitle{
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+
+            .likedTable{
+                background-color: antiquewhite;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,72 @@
+.single{
+    display: flex;
+    width: 100%;
+    .singleContainer{
+
+        flex: 6;
+    
+    .top{
+        padding: 20px;
+        gap: 20px;
+        display: flex;
+        .left{
+            flex: 1;
+            padding: 20px;
+            position: relative;
+           
+            .editButton{
+                position: absolute;
+                top:0;
+                right:0;
+                padding: 5px;
+                font-size: 12px;
+                background-color: rgb(148, 206, 206);
+                border-radius: 50%;
+
+            }
+            .infocard{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .userimage{
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 40%;
+                    margin-right: 20px;
+
+                }
+
+                .details{
+
+                    
+                    .itemtitle{
+                        margin-bottom: 10px;
+
+                    }
+                    .detailitem{
+                        margin-bottom: 10px;
+                        font-size: 14px;
+
+                        .itemkey{
+                            font-weight: bold;
+                            margin-right: 5px;
+                        }
+                        .itemvalue{
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right{
+            flex:2;
+        }
+    }
+    
+    }
+    .bottom{
+        padding: 20px;
+    }
+}

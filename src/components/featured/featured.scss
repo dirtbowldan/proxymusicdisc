@@ -1,0 +1,123 @@
+.featured {
+  flex: 2;
+  -webkit-box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.33);
+  box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.33);
+  background-color: rgb(145, 0, 0);
+  color: white;
+  border-radius: 15px;
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+
+    .title {
+      font-size: 30px;
+    }
+  }
+  .middle {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    font-weight: 500;
+
+    .overallRank {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 5px 7px 15px -7px rgba(0, 0, 0, 0.63);
+      border: 2px solid rgba(255, 60, 60, 0.329);
+      border-radius: 10px;
+      margin: 10px;
+      background-color: antiquewhite;
+      .ranktitle {
+        font-weight: 500;
+        color: gray;
+      }
+      .rank {
+        font-size: 45px;
+        color: rgb(145, 0, 0);;
+      }
+    }
+
+    .featuredChart {
+      background-color: antiquewhite;
+      display: flex;
+      margin: 10px;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px 7px 15px -7px rgba(0, 0, 0, 0.63);
+      border-radius: 10px;
+      border: 2px solid rgba(255, 60, 60, 0.363);
+      .percchart {
+        width: 50%;
+        height: 50%;
+      }
+      p {
+        font-weight: 500;
+
+        color: gray;
+      }
+    }
+  }
+  .bottom {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+    .desc {
+      font-weight: 300;
+      font-size: 12px;
+    }
+    .title {
+        font-size: 16px;
+      }
+
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+
+      
+
+      .item {
+        text-align: center;
+        box-shadow: 5px 7px 15px -7px rgba(0, 0, 0, 0.63);
+        border-radius: 10px;
+        border: 2px solid rgba(255, 60, 60, 0.37);
+        flex: 1;
+        margin: 10px;
+        padding: 10px;
+        background-color: antiquewhite;
+
+        
+        .itemtitle {
+          font-size: 16px;
+          color: gray;
+        }
+        .itemresult {
+          margin-top: 10px;
+          font-size: 30px;
+          color: rgb(145, 0, 0);
+        }
+      }
+    }
+  }
+}
