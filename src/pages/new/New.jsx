@@ -84,10 +84,19 @@ const New = ({ inputs }) => {
       <div className="newContainer">
       
         <div className="top">
-          <h1>Welcome to Proxy</h1>
+          <h1>Welcome to Proxy Music</h1>
+          <h3>A simple artist database</h3>
+          <hr></hr>
+          <p className="desc">Proxy Music was orignally the answer to my question: Why isnt there a list of all the rappers in my city? But ive since realized it can used for much more than that.  Due to the overwhelming amount of advertising from large label, independent artists of all sizes have a hard time getting exposure; Proxy Music is meant to level the playing field and bring a sense of community back to the music scene. Timestamp when you discover new artists, share them with your friends, and get notified when your favorites drop new music! </p>
+          
+        <hr></hr>
+        <a className="loginlink" href="/login">Already have an account? Login here</a>
         </div>
         <div className="bottom">
-          <div className="right">
+          <h2>Artist Signup</h2>
+          <p>If you are an artist please fill out all fields where possible. If you are not an artist please do not fill in Apple Music, Spotify, or SoundCloud.</p>
+        <div className="right">
+            
             <form onSubmit={handleAdd}>
               <img
                 className="inputimg"

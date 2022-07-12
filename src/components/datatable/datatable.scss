@@ -16,11 +16,34 @@
                 border-radius: 15px;
             }
         }
-    
+    .links{
+
+      display: flex;
+      align-items: center;
+      
+      .applelink{
+        color: black;
+        &:hover{
+            color: red;
+        }
+      }
+      .spotifylink{
+        color: black;
+        &:hover{
+            color: rgb(27, 212, 3);
+        }
+      }
+      .soundcloudlink{
+        color: black;
+        &:hover{
+            color: rgb(255, 145, 0);
+        }
+      }
+    }
     .cellWithImg{
+        
         display: flex;
         align-items: center;
-
         .cellImg{
             height: 64px;
             width: 64px;

@@ -10,12 +10,14 @@ const Featured = ({ currentUseruid }) => {
   const [rank, setRank] = React.useState(0)
   const [staterank, setStateRank] = React.useState(0)
   const [cityrank, setCityRank] = React.useState(0)
+  const [img, setimg] = React.useState("")
   let rankdata = null
   const fetchData = async () => {
     let list = [];
     try{
     querySnapshot = await getDoc(doc(db, "users", currentUseruid));
     rankdata = querySnapshot.data()
+    setimg(rankdata["img"])
     setRank(rankdata["rank"])
     setStateRank(rankdata["staterank"])
     setCityRank(rankdata["cityrank"])
@@ -32,7 +34,7 @@ const Featured = ({ currentUseruid }) => {
     <div className="featured">
       <div className="top">
         <h1 className="title">Artist Rank</h1>
-        <img src="yo" />
+        <img src={img} />
       </div>
       <div className="middle">
         <div className="featuredChart">

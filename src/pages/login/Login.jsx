@@ -30,6 +30,8 @@ const Login = () => {
   };
   return (
     <div className="login">
+      <h1>Login</h1>
+      <p>Employers please login with email: test@test.com  pw: test1234</p>
       <form onSubmit={handleLogin}>
         <input
           type="email"
@@ -38,7 +40,7 @@ const Login = () => {
         />
         <input
           type="password"
-          placeholder="passwor"
+          placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>

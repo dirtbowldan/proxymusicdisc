@@ -23,19 +23,14 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">USER</p>
-          <Link to="/users" style={{textDecoration: "none"}} >
+          <Link to="/" style={{textDecoration: "none"}} >
           <li>
             <CottageIcon className="icon" />
             <span>Homebase</span>
           </li>
           </Link>
-          <Link to="/users" style={{textDecoration: "none"}} >
-          <li>
-            <AccountBoxIcon className="icon" />
-            <span>Artist Profile</span>
-          </li>
-          </Link>
-          <Link to="/users" style={{textDecoration: "none"}} >
+          
+          <Link to="/messages" style={{textDecoration: "none"}} >
           <li>
             <MessageIcon className="icon" />
             <span>Messages</span>
@@ -48,7 +43,7 @@ const Sidebar = () => {
             <span>Leaderboard</span>
           </li>
           </Link>
-          <Link to="/users" style={{textDecoration: "none"}} >
+          <Link to="/likes" style={{textDecoration: "none"}} >
           <li>
             <FavoriteIcon className="icon" />
             <span>Likes</span>

@@ -11,6 +11,10 @@ import { onSnapshot } from "firebase/firestore";
 const Datatable = () => {
   const [data, setData] = useState([]);
 
+
+  const handleLike = (userid) => {
+    alert(userid)
+  }
   useEffect(() => {
     /*const fetchData = async () => {
       let list = [];
@@ -58,15 +62,11 @@ const Datatable = () => {
       renderCell: (params) => {
         return (
           <div className="cellAction">
-            <Link to="/users/testW" style={{ textDecoration: "none" }}>
+            <Link to={"/users/"+ params.row.id } style={{ textDecoration: "none" }}>
               <div className="viewButton">View</div>
             </Link>
-            <div
-              className="deleteButton"
-              onClick={() => handleDelete(params.row.id)}
-            >
-              Delete
-            </div>
+            <div className="viewButton" onClick={() => handleLike(params.row.id)}>Like</div>
+            
           </div>
         );
       },
@@ -75,17 +75,15 @@ const Datatable = () => {
   return (
     <div className="datatable">
       <div className="dataTitle">
-        add new user
-        <Link to="users/new" className="link">
-          Add new
-        </Link>
+        <h1>Leaderboard</h1>
+        
       </div>
       <DataGrid
         rows={data}
         columns={userColumns.concat(actionColumn)}
         pageSize={100}
         rowsPerPageOptions={[100 ]}
-        checkboxSelection
+        
       />
     </div>
   );

@@ -1,4 +1,7 @@
 import "./avatar.png";
+import AppleIcon from '@mui/icons-material/Apple';
+import { Icon } from '@iconify/react';
+import CloudIcon from '@mui/icons-material/Cloud';
 let rankcount=0
 export const userColumns = [
   { field: "rank", headerName: "Rank", width: 70, 
@@ -22,10 +25,18 @@ export const userColumns = [
   { field: "popularity", headerName: "Popularity",  },
   { field: "state", headerName: "State", },
   { field: "city", headerName: "City",  },
-  { field: "followers", headerName: "Followers",  },
+  { field: "followers", headerName: "Followers", renderCell: ()=>{return(<div>N/A</div>)} },
 
-  { field: "links", headerName: "Links", },
-  { field: "like", headerName: "Like",},
+  { field: "links", headerName: "Links",  renderCell: (params) => {
+    let rankcount=0
+    return (
+      <div className="links">
+        <a href={params.row.applemusic}><AppleIcon className="applelink" /></a>
+        <a href={params.row.spotify}><Icon icon="mdi:spotify" width="24" height="24" inline={true}className="spotifylink" /></a>
+        <a href={params.row.soundcloud}><CloudIcon className="soundcloudlink" /></a>
+      </div>
+    );
+  }},
 ];
 
 export const userRows = [

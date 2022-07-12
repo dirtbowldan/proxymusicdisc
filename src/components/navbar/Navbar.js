@@ -24,7 +24,7 @@ const Navbar = ({currentUser}) => {
   return (
     <div className="navbar">
       <div className="wrapper">
-        <div><h1>Profile</h1></div>
+        <div><h1></h1></div>
         <div className="items">
           <div className="item">
             <MessageIcon className="icon" />
@@ -39,12 +39,7 @@ const Navbar = ({currentUser}) => {
           <div className="item">
             <img src={require("./avatar.png")} className="avatar" />
           </div>
-          <div className="item">
-            <div className="search">
-              <input type="text" placeholder="Search" /> <SearchOutlinedIcon />
-            </div>
-            
-          </div>
+          
           <button type="submit" onClick={handleLogout}>Log Out</button>
         </div>
       </div>
