@@ -22,7 +22,7 @@ const Navbar = ({currentUser}) => {
 
 
   return (
-    <div className="navbar">
+    <div className="navbar1">
       <div className="wrapper">
         <div><h1></h1></div>
         <div className="items">

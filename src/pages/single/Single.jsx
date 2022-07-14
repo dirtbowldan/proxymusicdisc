@@ -9,6 +9,8 @@ import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useState } from "react";
 import SpotifyApi from "../../SpotifyApi";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 const Single = () => {
   const [nameData, setNameData] = React.useState("");
   const [locationData, setLocData] = React.useState("");
@@ -32,32 +34,21 @@ const Single = () => {
   fetchData();
 
   return (
-    <div className="single">
-      <Sidebar />
-      <div className="singleContainer">
-        <Navbar />
-      
-        <div className="top">
-          <div className="left">
-            <div className="editButton">Edit</div>
-            <div className="infocard">
-              <img className="userimage" src={imgData} />
-              <h1 className="usertitle">{nameData}</h1>
-              <div className="detailitem">
-                <span className="itemkey">Genre:</span>
-                <span className="itemvalue">Rap</span>
-              </div>
-              <div className="detailitem">
-                <span className="itemkey">Location:</span>
-                <span className="itemvalue">{locationData}</span>
-                <Featured currentUseruid={userid} />
-              </div>
-            </div>
-          </div>
-          <div className="right"></div>
-        </div>
-        
+    <div className="container-fluid">
+      <div className="row">
+      <div className="col-auto"><Sidebar /></div>
+      <div className="col"><Navbar />
+      <div className="row">
+        <div className="col">
+        <h1 className="artistTitle">{nameData}</h1>
+          <Featured currentUseruid={userid} /></div>
       </div>
+      
+      </div>
+      </div>
+      
+      
+   
     </div>
   );
 };

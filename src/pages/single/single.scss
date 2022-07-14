@@ -1,9 +1,21 @@
-.single{
+ .artistTitle{
+        text-align: center;
+    }
+    
+    
+    
+    
+    //old css below
+    
+    .single{
     display: flex;
     width: 100%;
+    overflow-x: hidden;
     .singleContainer{
 
         flex: 6;
+
+   
     
     .top{
         padding: 20px;
